@@ -1,7 +1,7 @@
 ---
 name: biomed-paper-writing
 description: Write publication-ready biomedical and pharmaceutical research papers for journals like Nature, Science, Cell, NEJM, Lancet, JAMA, Nature Medicine, and specialty journals. Use when drafting papers from research data, structuring IMRAD sections, verifying citations via PubMed, applying reporting guidelines (CONSORT, STROBE, PRISMA, ARRIVE), or preparing submissions. Make sure to use this skill whenever the user mentions writing a paper, drafting a manuscript, biomedical or clinical writing, research articles, IMRAD structure, journal names (Nature, Science, Cell, NEJM, Lancet, JAMA, BMJ, etc.), reporting guidelines (CONSORT, STROBE, PRISMA, ARRIVE, STARD, CARE, TRIPOD), responding to reviewer comments, cover letters, or converting lab results into manuscript form — even if they don't explicitly say "paper writing". Also trigger for drug development papers, grant manuscript sections, systematic reviews, meta-analyses, case reports, and any request involving PubMed citation verification.
-version: 1.1.0
+version: 1.2.0
 metadata:
   author: cafi
   license: MIT
@@ -258,5 +258,5 @@ Common figure types and their requirements: [references/writing-guide.md](refere
 |----------|-------------|
 | [writing-guide.md](references/writing-guide.md) | Drafting any section — contains Glasman-Deal models, Gopen & Swan principles, tense rules, vocabulary lists, figure standards |
 | [citation-workflow.md](references/citation-workflow.md) | Adding or verifying citations — contains PubMed/CrossRef API code, BibTeX formats, verification checklist |
-| [reporting-guidelines.md](references/reporting-guidelines.md) | Any study requiring reporting compliance — contains CONSORT, STROBE, PRISMA, ARRIVE, STARD, CARE checklists |
+| [reporting-guidelines.md](references/reporting-guidelines.md) | Any study requiring reporting compliance — contains CONSORT, STROBE, PRISMA, ARRIVE, STARD, CARE, TRIPOD/TRIPOD+AI checklists, plus CRediT author roles and SAGER sex/gender guidelines |
 | [sources.md](references/sources.md) | Looking up original sources — complete bibliography and journal author guideline links |
