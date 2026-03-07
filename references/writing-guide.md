@@ -154,10 +154,13 @@ CONCLUSIONS: What it means (1-2 sentences)
 ```
 
 **Word limits** vary by journal:
-- NEJM: 250 words
-- Lancet: 300 words
-- JAMA: 350 words (structured)
-- Nature Medicine: 150 words (unstructured)
+- NEJM: 250 words (structured: Objective, Design, Results, Conclusions)
+- Lancet: 300 words (structured: Background, Methods, Findings, Interpretation, Funding)
+- JAMA: 350 words (structured: Importance, Objective, Design, Setting, Participants, etc.)
+- BMJ: 400 words (structured)
+- Nature: 200 words ("summary paragraph" — context, background, "Here we show", implications)
+- Science: 250 words (single paragraph, ideally ~200)
+- Nature Medicine: 150 words (unreferenced)
 - Cell: 150 words (unstructured, called "Summary")
 
 ### What to Avoid in Abstracts

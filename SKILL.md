@@ -30,7 +30,7 @@ Paper writing is collaborative, but Claude should lead with output, not question
 
 ## Citation Safety
 
-AI-generated citations have a **~40% error rate**. In biomedical contexts, fabricated clinical evidence can have patient safety implications — a hallucinated RCT reference could influence treatment decisions.
+AI-generated citations have high error rates — studies report 20-40% fabrication depending on model and domain (Walczak & Cellary, JMIR 2024; Gravel et al., JAMIA 2023). In biomedical contexts, fabricated clinical evidence can have patient safety implications — a hallucinated RCT reference could influence treatment decisions.
 
 **The rule is simple**: never generate BibTeX from memory. Every citation must be verified through PubMed or CrossRef before inclusion.
 
@@ -200,19 +200,19 @@ Full vocabulary lists and connector language: [references/writing-guide.md](refe
 
 | Journal | Word Limit | Abstract | Key Requirement |
 |---------|-----------|----------|-----------------|
-| **NEJM** | 2500-3000 | 250 words, structured | ICMJE disclosure, data sharing |
-| **Lancet** | 3000-3500 | 300 words, structured | Research in Context panel |
-| **JAMA** | 3000 | 350 words, structured | ICMJE, key points box |
-| **BMJ** | 4000 | 250 words, structured | ICMJE, patient involvement |
+| **NEJM** | ~2700 | 250 words, structured | ICMJE disclosure, data sharing |
+| **Lancet** | 3000 (RCT up to 4500) | 300 words, structured (Background/Methods/Findings/Interpretation/Funding) | Research in Context panel |
+| **JAMA** | 3000 | 350 words, structured | ICMJE, 3 Key Points required |
+| **BMJ** | ~4400 (aim for 2000) | 400 words, structured | ICMJE, patient involvement |
 
 ### High-Impact Life Science
 
 | Journal | Word Limit | Abstract | Key Requirement |
 |---------|-----------|----------|-----------------|
-| **Nature** | ~3000 + Methods | 150 words, unstructured | Online Methods, Reporting Summary |
-| **Science** | ~2500 + SOM | 125 words, unstructured | Supplementary Online Material |
-| **Cell** | ~7000 + STAR Methods | 150 words ("Summary") | STAR Methods, Key Resources Table, Graphical Abstract |
-| **Nature Medicine** | ~3000 + Methods | 150 words, unstructured | Reporting Summary, data availability |
+| **Nature** | 2500 (6pp) / 4300 (8pp) + Methods | 200 words, "summary paragraph" (structured: context → background → "Here we show" → implications) | Online Methods (≤3000 words), Reporting Summary, ≤50 refs |
+| **Science** | ~3000 + SOM | 250 words (ideally ~200), single paragraph | Supplementary Online Material, one-sentence summary (≤135 chars) |
+| **Cell** | ~7000 + STAR Methods | 150 words ("Summary") | STAR Methods, Key Resources Table, Graphical Abstract (1200×1200px) |
+| **Nature Medicine** | 4000 + Methods | 150 words, unreferenced | Reporting Summary, data availability, ≤60 refs |
 
 ### Universal Requirements
 

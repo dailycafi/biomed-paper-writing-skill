@@ -62,7 +62,7 @@ biomed-paper-writing/
 
 ### Citation Safety
 
-AI models hallucinate ~40% of academic citations. In biomedicine, a fabricated RCT reference could influence treatment decisions. This skill enforces a strict verification workflow:
+AI models hallucinate 20-40% of academic citations (varies by model and domain; see Walczak & Cellary, JMIR 2024). In biomedicine, a fabricated RCT reference could influence treatment decisions. This skill enforces a strict verification workflow:
 
 1. Search PubMed via E-utilities API
 2. Cross-verify DOI through CrossRef
@@ -85,15 +85,18 @@ The skill automatically routes to the appropriate reporting guideline:
 
 ### Journal Requirements
 
-Built-in formatting specs for high-impact journals:
+Built-in formatting specs for high-impact journals (verified against official author guidelines, March 2026):
 
 | Journal | Word Limit | Abstract |
 |---------|-----------|----------|
-| NEJM | 2500-3000 | 250 words, structured |
-| Lancet | 3000-3500 | 300 words, structured |
-| Nature | ~3000 + Methods | 150 words, unstructured |
+| NEJM | ~2700 | 250 words, structured |
+| Lancet | 3000 (RCT up to 4500) | 300 words, structured |
+| JAMA | 3000 | 350 words, structured |
+| BMJ | ~4400 | 400 words, structured |
+| Nature | 2500 (6pp) / 4300 (8pp) + Methods | 200 words, "summary paragraph" |
+| Science | ~3000 + SOM | 250 words, single paragraph |
 | Cell | ~7000 + STAR Methods | 150 words ("Summary") |
-| Science | ~2500 + SOM | 125 words, unstructured |
+| Nature Medicine | 4000 + Methods | 150 words, unreferenced |
 
 ## Benchmark Results
 
