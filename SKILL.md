@@ -71,7 +71,8 @@ Different paper types need different structures and guidelines. Route accordingl
 | Animal research | IMRAD | ARRIVE | [reporting-guidelines.md](references/reporting-guidelines.md) |
 | Diagnostic accuracy | IMRAD | STARD | [reporting-guidelines.md](references/reporting-guidelines.md) |
 | Case report | Timeline-based narrative | CARE | [reporting-guidelines.md](references/reporting-guidelines.md) |
-| Prediction model | IMRAD | TRIPOD | [reporting-guidelines.md](references/reporting-guidelines.md) |
+| Prediction model (traditional) | IMRAD | TRIPOD | [reporting-guidelines.md](references/reporting-guidelines.md) |
+| Prediction model (AI/ML) | IMRAD | TRIPOD+AI | [reporting-guidelines.md](references/reporting-guidelines.md) |
 | Review article | Thematic sections (no Methods/Results) | None (but follow PRISMA if systematic) | — |
 | Letter / Correspondence | Brief, 1-2 pages, limited refs | None | — |
 
@@ -217,7 +218,9 @@ Full vocabulary lists and connector language: [references/writing-guide.md](refe
 ### Universal Requirements
 
 - **ICMJE compliance**: Authorship criteria, conflict of interest disclosure
+- **CRediT**: Author contribution roles (14 standardized roles) — required by Nature, Cell, Lancet, JAMA, BMJ, PLOS. See [reporting-guidelines.md](references/reporting-guidelines.md)
 - **Ethics**: IRB/IACUC approval, informed consent, trial registration
+- **SAGER guidelines**: Sex and gender reporting — distinguish sex (biological, male/female) from gender (social, men/women). Many journals now require compliance. See [reporting-guidelines.md](references/reporting-guidelines.md)
 - **Data availability**: Statement on data sharing (increasingly mandatory)
 - **References**: Vancouver style (numbered) for most medical journals; author-year for some life science
 

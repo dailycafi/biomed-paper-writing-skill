@@ -17,6 +17,7 @@ This reference documents mandatory reporting guidelines for different study type
 | Qualitative research | **SRQR** / **COREQ** | 21/32 items | Some journals |
 | Economic evaluation | **CHEERS** | 28 items | Health economics journals |
 | Prediction model study | **TRIPOD** | 22 items | Most clinical journals |
+| Prediction model with AI/ML | **TRIPOD+AI** | 22 + AI extensions | Journals publishing AI studies |
 | Quality improvement | **SQUIRE** | 18 items | QI journals |
 | N-of-1 trials | **CENT** | 26 items | Some journals |
 | Network meta-analysis | **PRISMA-NMA** | Extended | Most journals |
@@ -200,6 +201,112 @@ Records from other sources (n=...)
 
 ---
 
+## TRIPOD+AI (Prediction Models Using AI/ML)
+
+TRIPOD+AI (2024) extends the original TRIPOD 2015 checklist for prediction models that use machine learning, deep learning, or other AI methods. If the prediction model involves any AI/ML component, use TRIPOD+AI instead of TRIPOD alone.
+
+### Key Additional Requirements Beyond TRIPOD
+
+- **Title**: Identify as AI/ML-based prediction model
+- **Data sources**: Describe data provenance, collection context, and potential biases
+- **Data preprocessing**: Feature engineering, handling of missing data, normalization
+- **Model development**: Architecture, hyperparameter tuning, training procedure
+- **Model performance**: Discrimination (AUROC), calibration, decision curve analysis
+- **Fairness**: Performance across demographic subgroups (age, sex, ethnicity)
+- **Explainability**: Methods used to interpret model predictions (SHAP, LIME, attention maps)
+- **Reproducibility**: Code availability, software versions, random seeds
+- **Deployment considerations**: Intended clinical context, human oversight requirements
+
+### When to Use TRIPOD vs TRIPOD+AI
+
+| Model Type | Guideline |
+|------------|-----------|
+| Logistic regression, Cox regression | TRIPOD |
+| Random forest, XGBoost, neural network | TRIPOD+AI |
+| Deep learning (CNN, transformer) | TRIPOD+AI |
+| Traditional score + ML validation | TRIPOD+AI |
+
+---
+
+## SAGER Guidelines (Sex and Gender Reporting)
+
+The SAGER (Sex And Gender Equity in Research) guidelines ensure appropriate reporting of sex and gender in research. Many journals now require compliance.
+
+### Key Requirements
+
+1. **Title/Abstract**: State whether sex/gender was considered
+2. **Introduction**: Justify why sex/gender is relevant (or why not analyzed)
+3. **Methods**:
+   - Report how sex and/or gender were determined (self-report, genetic, hormonal)
+   - Distinguish between sex (biological) and gender (social construct)
+   - Include both sexes in study design unless single-sex study is justified
+4. **Results**: Report data disaggregated by sex/gender where possible
+5. **Discussion**: Address implications of sex/gender findings or lack thereof
+
+### Journal-Specific Requirements
+
+| Journal | Sex/Gender Policy |
+|---------|-------------------|
+| **JAMA** | Requires sex/gender reporting; specific guidelines for race/ethnicity terminology |
+| **Lancet** | SAGER compliance expected; inclusive language guidelines |
+| **Nature journals** | Reporting Summary includes sex/gender questions |
+| **BMJ** | SAGER endorsed; sex-disaggregated data encouraged |
+| **Cell Press** | Inclusion and diversity statement required |
+
+### Terminology
+
+- **Sex**: Biological attributes (chromosomes, hormones, anatomy) — use "male/female"
+- **Gender**: Social/cultural roles — use "men/women/non-binary"
+- Do NOT use "gender" when referring to biological sex of animals or cells
+
+---
+
+## CRediT (Contributor Roles Taxonomy)
+
+CRediT is now required or recommended by most high-impact biomedical journals for declaring author contributions. It standardizes 14 contributor roles.
+
+### The 14 CRediT Roles
+
+| Role | Definition |
+|------|-----------|
+| **Conceptualization** | Ideas; formulation of research goals and aims |
+| **Data curation** | Annotation, scrubbing, maintenance of research data |
+| **Formal analysis** | Statistical, mathematical, computational analysis |
+| **Funding acquisition** | Obtaining financial support |
+| **Investigation** | Conducting research and experiments |
+| **Methodology** | Development or design of methodology |
+| **Project administration** | Management and coordination |
+| **Resources** | Provision of study materials, reagents, patients, samples |
+| **Software** | Programming, software development |
+| **Supervision** | Oversight and leadership |
+| **Validation** | Verification and reproducibility |
+| **Visualization** | Preparation of figures and tables |
+| **Writing – original draft** | Initial writing |
+| **Writing – review & editing** | Critical review, commentary, revision |
+
+### Format Example
+
+```
+Author Contributions: A.B.C. — Conceptualization, Methodology, Writing – original draft.
+D.E.F. — Investigation, Formal analysis, Visualization. G.H.I. — Resources, Supervision,
+Writing – review & editing, Funding acquisition.
+```
+
+### Journal Requirements
+
+| Journal | CRediT Status |
+|---------|--------------|
+| **Nature / Nature Medicine** | Required |
+| **Cell / Cell Press** | Required |
+| **Lancet** | Required |
+| **JAMA** | Required |
+| **NEJM** | Author contribution statement required (not strictly CRediT format) |
+| **BMJ** | Required |
+| **Science** | Author contribution statement required |
+| **PLOS journals** | Required |
+
+---
+
 ## Journal-Specific Requirements
 
 ### Nature / Nature Medicine
@@ -258,5 +365,8 @@ Records from other sources (n=...)
 - **ARRIVE**: https://arriveguidelines.org/
 - **STARD**: https://www.equator-network.org/reporting-guidelines/stard/
 - **CARE**: https://www.care-statement.org/
+- **TRIPOD+AI**: https://www.bmj.com/content/385/bmj-2023-078378
+- **CRediT**: https://credit.niso.org/
+- **SAGER**: https://ease.org.uk/communities/gender-policy-committee/the-sager-guidelines/
 - **PROSPERO** (SR registration): https://www.crd.york.ac.uk/prospero/
 - **ClinicalTrials.gov**: https://clinicaltrials.gov/

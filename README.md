@@ -7,9 +7,11 @@ A [Claude Code skill](https://docs.anthropic.com/en/docs/claude-code/skills) tha
 When you ask Claude Code to help write a biomedical paper, this skill activates and provides:
 
 - **IMRAD section guidance** based on Glasman-Deal's 4-component models — concrete frameworks for what goes in each section of a paper (Introduction, Methods, Results, Discussion)
-- **PubMed citation verification** — every citation is searched and verified through PubMed E-utilities API and CrossRef, preventing the ~40% error rate of AI-generated references
-- **Reporting guideline checklists** — CONSORT (RCTs), STROBE (observational), PRISMA (systematic reviews), ARRIVE (animal studies), STARD, CARE, TRIPOD
+- **PubMed citation verification** — every citation is searched and verified through PubMed E-utilities API and CrossRef, preventing the 20-40% error rate of AI-generated references
+- **Reporting guideline checklists** — CONSORT (RCTs), STROBE (observational), PRISMA (systematic reviews), ARRIVE (animal studies), STARD, CARE, TRIPOD, TRIPOD+AI
 - **Journal-specific formatting** — word limits, abstract formats, and submission requirements for Nature, Science, Cell, NEJM, Lancet, JAMA, and more
+- **CRediT author contributions** — 14 standardized contributor roles, now required by most high-impact journals
+- **SAGER sex/gender reporting** — guidelines for distinguishing and reporting sex vs gender in research
 - **Writing quality principles** — Gopen & Swan's reader expectation framework, tense usage rules, signalling language, and vocabulary lists
 
 ## Quick Start
@@ -81,7 +83,8 @@ The skill automatically routes to the appropriate reporting guideline:
 | Animal research | ARRIVE |
 | Diagnostic accuracy | STARD |
 | Case report | CARE |
-| Prediction model | TRIPOD |
+| Prediction model (traditional) | TRIPOD |
+| Prediction model (AI/ML) | TRIPOD+AI |
 
 ### Journal Requirements
 

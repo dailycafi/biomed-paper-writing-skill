@@ -37,6 +37,9 @@ All authoritative sources used to build this skill, organized by topic.
 | **STARD** | [EQUATOR](https://www.equator-network.org/reporting-guidelines/stard/) | Diagnostic accuracy |
 | **CARE** | [care-statement.org](https://www.care-statement.org/) | Case reports |
 | **TRIPOD** | [EQUATOR](https://www.equator-network.org/reporting-guidelines/tripod-statement/) | Prediction models |
+| **TRIPOD+AI** | [BMJ 2024](https://www.bmj.com/content/385/bmj-2023-078378) | AI/ML prediction models |
+| **CRediT** | [credit.niso.org](https://credit.niso.org/) | Author contribution roles (14 roles) |
+| **SAGER** | [EASE](https://ease.org.uk/communities/gender-policy-committee/the-sager-guidelines/) | Sex and gender equity in research |
 | **CHEERS** | [EQUATOR](https://www.equator-network.org/reporting-guidelines/cheers/) | Economic evaluations |
 | **EQUATOR Network** | [equator-network.org](https://www.equator-network.org/) | Central resource for all guidelines |
 

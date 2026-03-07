@@ -20,7 +20,7 @@ This reference provides a complete workflow for managing citations in biomedical
 
 ### The Hallucination Problem
 
-AI-generated citations have a **~40% error rate**. Common errors in biomedical contexts:
+AI-generated citations have a **20-40% error rate** depending on model and domain (Walczak & Cellary, JMIR 2024; Gravel et al., JAMIA 2023). Common errors in biomedical contexts:
 - Fabricated clinical trial results attributed to real authors
 - Wrong journal names or publication years
 - Non-existent papers with plausible PubMed-style metadata
