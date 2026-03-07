@@ -1,0 +1,23 @@
+{
+  "skill_name": "biomed-paper-writing",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I have results showing that a novel anti-PD-L1 antibody combined with a STING agonist significantly improves tumor regression in a syngeneic mouse model compared to either agent alone. The combination achieved complete regression in 60% of mice vs 15% for anti-PD-L1 alone. Help me draft the Introduction section for a Nature Medicine submission.",
+      "expected_output": "A well-structured Introduction following Glasman-Deal's 4-component model (establish importance → literature review → gap → present work), with appropriate tense usage, gap language, and Nature Medicine style (concise, unstructured format)",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "We ran a Phase 2, randomized, double-blind, placebo-controlled trial of empagliflozin 10mg vs placebo in 240 patients with HFpEF (LVEF >= 50%). Primary endpoint was change in NT-proBNP at 12 weeks. Randomization was 1:1 stratified by diabetes status. IRB approved by Mass General Brigham (protocol #2024-001234). Write the Methods section.",
+      "expected_output": "A complete Methods section with ethical approvals, study design, participant eligibility, intervention details, outcomes, and statistical analysis plan, following CONSORT structure",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "I'm writing a review on CAR-T cell therapy for solid tumors. I need 3-5 verified citations supporting the claim that the immunosuppressive tumor microenvironment is a major barrier to CAR-T efficacy in solid tumors. Search PubMed and give me verified BibTeX entries.",
+      "expected_output": "3-5 real, PubMed-verified citations with BibTeX entries, each with PMID and DOI confirmed, supporting the specific claim about tumor microenvironment barriers to CAR-T therapy",
+      "files": []
+    }
+  ]
+}
