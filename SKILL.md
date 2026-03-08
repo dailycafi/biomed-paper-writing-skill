@@ -48,7 +48,7 @@ See [references/citation-workflow.md](references/citation-workflow.md) for PubMe
 
 ## Paper Writing Workflow
 
-### Step 0: Understand the Project
+### Step 0: Understand the Scientific Questions
 
 Before writing, explore what exists:
 - Data files, analysis notebooks, statistical output
