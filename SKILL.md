@@ -1,11 +1,10 @@
 ---
-name: biomed-paper-writing
-description: Write publication-ready biomedical and pharmaceutical research papers for journals like Nature, Science, Cell, NEJM, Lancet, JAMA, Nature Medicine, and specialty journals. Use when drafting papers from research data, structuring IMRAD sections, verifying citations via PubMed, applying reporting guidelines (CONSORT, STROBE, PRISMA, ARRIVE), or preparing submissions. Make sure to use this skill whenever the user mentions writing a paper, drafting a manuscript, biomedical or clinical writing, research articles, IMRAD structure, journal names (Nature, Science, Cell, NEJM, Lancet, JAMA, BMJ, etc.), reporting guidelines (CONSORT, STROBE, PRISMA, ARRIVE, STARD, CARE, TRIPOD), responding to reviewer comments, cover letters, or converting lab results into manuscript form — even if they don't explicitly say "paper writing". Also trigger for drug development papers, grant manuscript sections, systematic reviews, meta-analyses, case reports, and any request involving PubMed citation verification.
-version: 1.2.0
+name: biomed-paper-writing-skill
+description: Write publication-ready biomedical research papers with IMRAD structure, CNS-style figures, LaTeX generation, and PubMed-verified citations. Use when user mentions writing a paper, drafting a manuscript, IMRAD, journal names (Nature, Science, Cell, NEJM, Lancet, JAMA), reporting guidelines (CONSORT, STROBE, PRISMA, ARRIVE), reviewer comments, cover letters, or converting lab results into manuscript form. Also triggers for generating publication figures, LaTeX compilation, multi-omics paper checklists, and citation verification.
+version: 1.4.0
 metadata:
   author: cafi
   license: MIT
-tags: [Academic Writing, Biomedical, Pharmaceutical, IMRAD, PubMed, CONSORT, STROBE, PRISMA, ARRIVE, LaTeX, Citations, Nature, Science, Cell, NEJM, Lancet, JAMA]
 ---
 
 # Biomedical Paper Writing
@@ -239,16 +238,60 @@ Common figure types and their requirements: [references/writing-guide.md](refere
 
 ---
 
+## LaTeX Manuscript Generation
+
+Generate clean LaTeX directly — never use pandoc conversion (produces `{[}` artifacts). Key rules: `\cite{}` not `{[}`, `\emph{GENE}` for gene names, figure legends in `\caption{}` only (no separate section), `[H]` for draft positioning. In Chinese academia, last corresponding author = highest seniority.
+
+Full details: [references/latex-workflow.md](references/latex-workflow.md)
+
+---
+
+## Figure Generation for CNS Journals
+
+CNS journals require low-saturation, professional colors. Critical rules: no single-bar charts, no placeholder data, no text overlap, check z-index, ample panel spacing (`hspace≥0.65`), always self-check figures after generation.
+
+Full color palette, design rules, and self-check list: [references/figure-generation.md](references/figure-generation.md)
+
+---
+
+## Required Tables
+
+Place tables in **Results** (not Methods) where the data is discussed:
+- **Table 1**: Clinical demographics — required when study involves patient cohorts
+- **Gene/feature tables**: After the paragraph describing the finding (e.g., IR genes, MI genes)
+- **Validation summary**: After external validation paragraph
+
+---
+
+## QC Section in Methods (MANDATORY)
+
+Every omics paper MUST include a dedicated QC subsection. Include per-modality thresholds, retention rates, batch correction metrics, and statement of uniform thresholds across groups. Missing QC is a common desk-rejection reason.
+
+---
+
 ## Common Pitfalls
 
 | Pitfall | Why It's a Problem | Fix |
 |---------|-------------------|-----|
 | Introduction jumps to problem | Reader lacks context to understand why gap matters | Follow 4-component model: importance → literature → gap → present work |
 | Methods missing ethics | Automatic desk rejection at most journals | Always state IRB/IACUC approval number and consent process |
+| Methods missing QC | Reviewers question data quality immediately | Add dedicated QC subsection with per-modality thresholds and retention rates |
 | Results mixed with interpretation | Obscures actual findings, makes replication harder | Keep Results factual; save interpretation for Discussion |
 | No limitations paragraph | Signals naivety or evasion to reviewers | Be honest — reviewers respect transparency |
+| Tables in wrong section | Tables with results data shouldn't be buried in Methods | Place gene/feature tables in Results, right after the paragraph that describes them |
+| Figure legends duplicated | Caption in figure AND separate legend section = redundant | Use `\caption{}` only; delete standalone Figure Legends section |
 | "Significant" without qualifier | Ambiguous — could mean statistically or clinically | Always specify: "statistically significant (P = 0.003)" or "clinically significant (NNT = 12)" |
 | Overclaiming | Reviewers will downgrade if conclusions exceed evidence | "suggests" not "proves"; observational data shows "association" not "causation" |
+| Delta plot with baseline = 0 | A bar at zero looks like missing data | Show absolute values instead of deltas, or use dot plots |
+| Bibliography format | Pandoc-converted refs use `{[}1{]}` not `\cite{}` | Always generate clean LaTeX with proper `\cite` and `\bibitem` |
+
+---
+
+## Multi-omics Paper Checklist
+
+For spatial multi-omics studies: pseudobulk DE (avoid pseudoreplication), sample-level statistics, cross-modality validation, and honest limitation reporting (cross-sectional design, annotation confidence, missing QC samples).
+
+Full checklist: [references/multi-omics-checklist.md](references/multi-omics-checklist.md)
 
 ---
 
@@ -260,3 +303,55 @@ Common figure types and their requirements: [references/writing-guide.md](refere
 | [citation-workflow.md](references/citation-workflow.md) | Adding or verifying citations — contains PubMed/CrossRef API code, BibTeX formats, verification checklist |
 | [reporting-guidelines.md](references/reporting-guidelines.md) | Any study requiring reporting compliance — contains CONSORT, STROBE, PRISMA, ARRIVE, STARD, CARE, TRIPOD/TRIPOD+AI checklists, plus CRediT author roles and SAGER sex/gender guidelines |
 | [sources.md](references/sources.md) | Looking up original sources — complete bibliography and journal author guideline links |
+| [figure-generation.md](references/figure-generation.md) | Generating CNS-style figures — color palette, design rules, self-check list |
+| [latex-workflow.md](references/latex-workflow.md) | LaTeX generation — workflow, best practices, author conventions, Nature ref format |
+| [multi-omics-checklist.md](references/multi-omics-checklist.md) | Multi-omics papers — data description, analysis, validation, limitations checklists |
+
+---
+
+## Examples
+
+### Example 1: Draft a manuscript from analysis results
+
+User says: "Write a paper from my spatial transcriptomics analysis targeting Nature Genetics"
+
+Actions:
+1. Read existing analysis scripts, result files, and figures
+2. Identify the one-sentence finding and confirm with scientist
+3. Draft Abstract → Introduction → Results → Methods → Discussion
+4. Generate clean LaTeX with embedded figures
+5. Compile with tectonic, upload to gdrive
+
+Result: Complete manuscript PDF with 7 figures, 3 tables, 59 references
+
+### Example 2: Generate publication figures
+
+User says: "Create figures for the manuscript, CNS style"
+
+Actions:
+1. Read result CSV files for each panel's data
+2. Generate multi-panel figures with CNS color palette
+3. Self-check each figure for overlaps, empty panels, z-index issues
+4. Compile LaTeX and verify figure embedding
+
+Result: 7 publication-ready PNG+PDF figures at 300 DPI
+
+---
+
+## Troubleshooting
+
+### Figures have text overlap
+Cause: Panel spacing too small or legend inside plot area.
+Solution: Increase `hspace/wspace` to 0.65+; move legend with `bbox_to_anchor`.
+
+### LaTeX has `{[}` instead of citations
+Cause: File was generated by pandoc from markdown.
+Solution: Generate clean LaTeX directly, using `\cite{}` and `\begin{thebibliography}`.
+
+### Figure panel is empty
+Cause: Data file path wrong or column name mismatch.
+Solution: Always verify data file exists and check column names with `head -3` before plotting.
+
+### Table appears in wrong section
+Cause: Table placed in Methods instead of Results.
+Solution: Put gene/feature tables immediately after the Results paragraph that discusses them.
